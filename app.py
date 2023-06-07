@@ -22,8 +22,8 @@ def create_bar_chart(data):
 def main():
     st.set_page_config(layout="wide")
     st.title('Aplikasi Data Visualization & Dashboard')
-    st.write('Unggah file CSV untuk memvisualisasikan datanya')
-    st.write('hanya mendukung 2 kolom dengan nama kolom : labels & qty')
+    st.write('Unggah file CSV untuk memvisualisasikan datanya & hanya mendukung 2 kolom dengan nama kolom : labels | qty')
+  
 
     # Upload file CSV
     uploaded_file = st.sidebar.file_uploader('Unggah file CSV', type=['csv'])
