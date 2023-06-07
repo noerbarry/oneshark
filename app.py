@@ -43,6 +43,18 @@ def main():
         bar_chart_fig = create_bar_chart(data)
         st.plotly_chart(bar_chart_fig, use_container_width=True)
 
+        # Tampilkan angka-angka jumlah
+        total_qty = data['qty'].sum()
+        max_qty = data['qty'].max()
+        min_qty = data['qty'].min()
+        avg_qty = data['qty'].mean()
+
+        st.subheader('Numbers')
+        st.write(f"Total Quantity: {total_qty}")
+        st.write(f"Maximum Quantity: {max_qty}")
+        st.write(f"Minimum Quantity: {min_qty}")
+        st.write(f"Average Quantity: {avg_qty}")
+
     # Tampilkan logo
     logo_image = Image.open('logo.png')
     logo_resized = logo_image.resize((200, 200))  # Ubah ukuran sesuai kebutuhan
@@ -59,4 +71,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
