@@ -10,12 +10,12 @@ def read_csv(file):
 
 # Fungsi untuk membuat Donut Chart menggunakan Plotly
 def create_donut_chart(data):
-    fig = px.pie(data, names='Labels', values='qty dialog', hole=0.5)
+    fig = px.pie(data, names='Labels', values='qty', hole=0.5)
     return fig
 
 # Fungsi untuk membuat Bar Chart menggunakan Plotly
 def create_bar_chart(data):
-    fig = px.bar(data, x='Labels', y='qty dialog')
+    fig = px.bar(data, x='Labels', y='qty')
     return fig
 
 # Tampilan aplikasi web menggunakan Streamlit
